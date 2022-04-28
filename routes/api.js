@@ -22,14 +22,14 @@ router.post("/api/transaction/bulk", ({body}, res) => {
 });
 
 router.get("/api/transaction", (req, res) => {
-  res.json([{value: 7, name: "Some fake data"}])
-  // Transaction.find({}).sort({date: -1})
-  //   .then(dbTransaction => {
-  //     res.json(dbTransaction);
-  //   })
-  //   .catch(err => {
-  //     res.status(404).json(err);
-  //   });
+  // res.json([{value: 7, name: "Some fake data"}])
+  Transaction.find({}).sort({date: -1})
+    .then(dbTransaction => {
+      res.json(dbTransaction);
+    })
+    .catch(err => {
+      res.status(404).json(err);
+    });
 });
 
 module.exports = router;
