@@ -22,7 +22,7 @@ router.post("/api/transaction/bulk", ({body}, res) => {
 });
 
 router.get("/api/transaction", (req, res) => {
-  res.json([{value: 7, name: “Some fake data”}])
+  res.json([{value: 7, name: "Some fake data"}])
   // Transaction.find({}).sort({date: -1})
   //   .then(dbTransaction => {
   //     res.json(dbTransaction);
